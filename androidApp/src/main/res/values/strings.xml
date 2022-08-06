@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GoToEsig</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="add_trip">Add trip</string>
+    <string name="trips">Trips</string>
+    <string name="search_trip">Search Trip</string>
+    <string name="rate_trip">Rate Trip</string>
+    <string name="statistics">Statistics</string>
+    <string name="quit">Quit</string>
+
+    <string name="cd_navigate_profile">Navigate to the profile screen</string>
+    <string name="cd_navigate_addTrip">Navigate to add trip screen</string>
+
+    <string name="menu">Menu</string>
+</resources>
