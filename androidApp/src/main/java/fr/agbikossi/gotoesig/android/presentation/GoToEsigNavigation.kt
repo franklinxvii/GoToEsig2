@@ -1,27 +1,38 @@
 package fr.agbikossi.gotoesig.android.presentation
 
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import fr.agbikossi.gotoesig.android.R
+import fr.agbikossi.gotoesig.android.presentation.home.HomeScreen
+import fr.agbikossi.gotoesig.android.presentation.home.LoginScreen
+import fr.agbikossi.gotoesig.android.presentation.home.RegisterScreen
+import fr.agbikossi.gotoesig.android.presentation.profile.ProfileScreen
 
 
 @Composable
 fun GoToEsigNavigation(
     navController: NavHostController,
-    modifier: Modifier
+    modifier: Modifier = Modifier,
 ) {
-    NavHost(navController = navController, startDestination = GoToEsigDestination.Home.route){
-        composable(GoToEsigDestination.Home.route){
-            HomeScreen()
+    NavHost(navController = navController, startDestination = GoToEsigDestination.Home.route, modifier = modifier) {
+        composable(GoToEsigDestination.Home.route) {
+            HomeScreen(navController)
+        }
+        composable(GoToEsigDestination.Register.route) {
+            RegisterScreen(navController)
+        }
+        composable(GoToEsigDestination.Login.route) {
+            LoginScreen(navController)
+        }
+        composable(GoToEsigDestination.Profile.route) {
+            ProfileScreen(navController)
         }
     }
 
 }
-
 
 
 /**
@@ -32,7 +43,9 @@ enum class GoToEsigDestination(
     val titleId: Int,
     val hasMenuItem: Boolean = true
 ) {
-    Home("home" , R.string.home, false ),
+    Home("home", R.string.home, false),
+    Register("register", R.string.register, false),
+    Login("login", R.string.sign_in, false),
     Profile("profile", R.string.profile),
     AddTrip("addTrip", R.string.add_trip),
     Trips("trips", R.string.trips),
@@ -119,8 +132,3 @@ class GoToEsigNavigationActions(navController: NavHostController) {
 }
 */
 
-
-@Composable
-fun HomeScreen() {
-   Text("Home")
-}

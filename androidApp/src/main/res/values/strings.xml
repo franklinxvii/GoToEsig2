@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">GoToEsig</string>
     <string name="home">Home</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
     <string name="profile">Profile</string>
     <string name="add_trip">Add trip</string>
     <string name="trips">Trips</string>
@@ -14,4 +16,10 @@
     <string name="cd_navigate_addTrip">Navigate to add trip screen</string>
 
     <string name="menu">Menu</string>
+
+    //Home Screen
+    <string name="welcome_message">Welcome to</string>
+    <string name="sign_in">Log in</string>
+    <string name="signup">Register</string>
+
 </resources>
